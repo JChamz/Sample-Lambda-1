@@ -3,9 +3,9 @@ version: 0.2
 phases:
   build:
     commands:
+      - echo Installing npm...
       - npm install
-      - aws cloudformation package --template template.yml --s3-bucket $S3_BUCKET --output-template template-export.yml
 artifacts:
   type: zip
   files:
-    - template-export.yml
+    - project.zip
